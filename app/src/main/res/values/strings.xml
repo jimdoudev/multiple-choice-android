@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Multiple Choice Project</string>
+    <string name="begin">BEGIN</string>
 </resources>

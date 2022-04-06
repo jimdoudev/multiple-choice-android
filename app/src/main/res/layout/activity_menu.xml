@@ -6,4 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Menu">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="148dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="195dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/permanent_marker"
+        android:rotation="-17"
+        android:rotationY="6"
+        android:text="Multiple Choice Test"
+        android:textAlignment="center"
+        android:textColor="#4BA2E8"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/BtNew"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="#47ACEF"
+        android:text="ΝΕΟ ΤΕΣΤ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/BtGrades"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#47ACEF"
+        android:text="HIGH SCORES"
+        app:layout_constraintStart_toStartOf="@+id/BtNew"
+        app:layout_constraintTop_toBottomOf="@+id/BtNew" />
+
+    <Button
+        android:id="@+id/BtReturn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#47ACEF"
+        android:text="ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ"
+        app:layout_constraintStart_toStartOf="@+id/BtGrades"
+        app:layout_constraintTop_toBottomOf="@+id/BtGrades" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

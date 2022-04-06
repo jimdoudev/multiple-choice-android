@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".MultipleChoice">
 
+    <TextView
+        android:id="@+id/TvTimer"
+        android:layout_width="125dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:text="03:00"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PbProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="360dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="16dp"
+        android:max="180"
+        android:progress="180"
+        android:progressTint="#2196F3"
+        android:scaleY="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvTimer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

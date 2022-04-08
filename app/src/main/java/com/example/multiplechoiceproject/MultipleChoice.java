@@ -83,7 +83,6 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
         bundle = getIntent().getExtras();
         Name = bundle.getString("Name");
         AM = bundle.getString("AM");
-        System.out.println(Name + AM);
         DB = SQLiteDatabase.openDatabase(getApplicationContext().getFilesDir() + "/MultipleChoiceProject.db", null, 0);
         AllQuests = FinalQuestions.GetInstance(this, DB);
         TimerStart();
@@ -105,7 +104,6 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
                 return;
             }
             CurrentQuestion.setUserAnswer(SelectedAnswer);
-            System.out.println(CurrentQuestion.getUserAnswer());
             Next();
         }
         for (int i = 0; i < 4; i++) {
@@ -134,7 +132,6 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
                 TvAnswers[i].setEnabled(false);
                 TvAnswers[i].setText("");
             }
-            System.out.println(CurrentQuestion.getCorrectAnswer());
         }
         SelectedAnswer = -1;
     }
@@ -232,18 +229,14 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
                 ScoreCounter++;
             }
         }
-        System.out.println(ScoreCounter);
         double l = ScoreCounter;
-        System.out.println(l);
         Score = String.format("%.2f", (l / NoQ) * 100);
-        System.out.println(Score);
     }
 
     public void GetDate() {
         Date Date = Calendar.getInstance().getTime();
         DateFormat DateFormat = new SimpleDateFormat("dd-MM-yyyy");
         DateSnap = DateFormat.format(Date);
-        System.out.println(DateSnap);
     }
 
     public void StartNextActivity() {

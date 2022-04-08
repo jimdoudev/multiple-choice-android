@@ -58,7 +58,6 @@ public class FinalQuestions {
             } while (CurAns.moveToNext());
             CurAns.close();
             Questions.add(Q);
-            System.out.println(Q.getQuestionText());
         } while(Cur.moveToNext());
         Cur.close();
 

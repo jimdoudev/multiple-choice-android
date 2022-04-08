@@ -43,6 +43,7 @@
         android:fontFamily="@font/play"
         android:text="Φοιτητής: Δημ. Δούμπης/ 20021"
         android:textAlignment="center"
+        android:textColor="#704e7d"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

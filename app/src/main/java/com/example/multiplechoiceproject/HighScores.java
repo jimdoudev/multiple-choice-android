@@ -66,7 +66,7 @@ public class HighScores extends AppCompatActivity {
             Cur.close();
 
         } else {
-            TvFullName.append("No Entries.....");
+            TvFullName.append("\n\nΚαμία Εγγραφή");
         }
     }
 }

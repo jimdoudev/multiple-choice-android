@@ -41,6 +41,7 @@ public class DataEntry extends AppCompatActivity {
                 bundle.putString("AM", EtAM.getText().toString());
                 intent.putExtras(bundle);
                 startActivity(intent);
+                finish();
             }
         });
     }

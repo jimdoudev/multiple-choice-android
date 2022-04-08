@@ -50,7 +50,7 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
     String Name;
     String AM;
     String Score;
-    int ScoreID;
+    int ScoreCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +105,7 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
                 return;
             }
             CurrentQuestion.setUserAnswer(SelectedAnswer);
+            System.out.println(CurrentQuestion.getUserAnswer());
             Next();
         }
         for (int i = 0; i < 4; i++) {
@@ -133,6 +134,7 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
                 TvAnswers[i].setEnabled(false);
                 TvAnswers[i].setText("");
             }
+            System.out.println(CurrentQuestion.getCorrectAnswer());
         }
         SelectedAnswer = -1;
     }
@@ -202,7 +204,9 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
         GetScore();
         GetDate();
         InsertData();
+        AllQuests.ResetFinalQuestions();
         StartNextActivity();
+        finish();
     }
 
     public void InsertData() {
@@ -211,8 +215,6 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
         stmt.bindString(2, AM);
         stmt.bindString(3, Score);
         stmt.bindString(4, DateSnap);
-        ScoreID = (int) stmt.executeInsert();
-        System.out.println(ScoreID);
     }
 
     @Override
@@ -221,15 +223,17 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
     }
 
     public void GetScore() {
-        Double Counter = 0.0;
         DecimalFormat df = new DecimalFormat("00.00");
         int NoQ = AllQuests.GetNoQuestions();
         for(int i = 0; i < NoQ; i++) {
             if(AllQuests.GetQuestion(i).isCorrect()) {
-                Counter++;
+                ScoreCounter++;
             }
         }
-        Score = df.format((Counter / NoQ) * 100);
+        System.out.println(ScoreCounter);
+        double l = ScoreCounter;
+        System.out.println(l);
+        Score = String.format("%.2f", (l / NoQ) * 100);
         System.out.println(Score);
     }
 
@@ -241,7 +245,8 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
     }
 
     public void StartNextActivity() {
-        bundle.putInt("ScoreID", ScoreID);
+        bundle.putString("Score", Score);
+        bundle.putInt("ScoreCounter", ScoreCounter);
         Intent intent = new Intent(getApplicationContext(), Evaluation.class);
         intent.putExtras(bundle);
         startActivity(intent);

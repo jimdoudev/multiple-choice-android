@@ -52,7 +52,7 @@
     <Button
         android:id="@+id/BtStart"
         android:layout_width="127dp"
-        android:layout_height="51dp"
+        android:layout_height="50dp"
         android:layout_marginTop="56dp"
         android:backgroundTint="#47ACEF"
         android:text="ΕΝΑΡΞΗ"

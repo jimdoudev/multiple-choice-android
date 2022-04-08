@@ -48,7 +48,7 @@ public class FinalQuestions {
             int NoQ = Cur.getInt(0);
             Question Q = new Question();
             Q.setQuestionText(Cur.getString(1));
-            Cursor CurAns = DB.rawQuery("SELECT AnsID, Answer, Correct FROM Answers WHERE QuestID=?", new String[] {Integer.toString(NoQ)});
+            Cursor CurAns = DB.rawQuery("SELECT RelativeID, Answer, Correct FROM Answers WHERE QuestID=?", new String[] {Integer.toString(NoQ)});
             CurAns.moveToFirst();
             do {
                 Q.AddAnswer(CurAns.getString(1));
@@ -112,5 +112,11 @@ public class FinalQuestions {
             }
         } while (GetQuestion(CurrentQuestion).isAnswered());
         return CurrentQuestion;
+    }
+
+    public void ResetFinalQuestions() {
+        for(int i = 0; i < Questions.size(); i++) {
+            Questions.get(i).setUserAnswer(-1);
+        }
     }
 }

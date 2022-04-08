@@ -41,6 +41,7 @@
         android:layout_marginTop="156dp"
         android:backgroundTint="#47ACEF"
         android:text="ΝΕΟ ΤΕΣΤ"
+        app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +54,7 @@
         android:layout_marginTop="12dp"
         android:backgroundTint="#47ACEF"
         android:text="HIGH SCORES"
+        app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="@+id/BtNew"
         app:layout_constraintTop_toBottomOf="@+id/BtNew" />
 
@@ -63,6 +65,7 @@
         android:layout_marginTop="12dp"
         android:backgroundTint="#47ACEF"
         android:text="ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ"
+        app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="@+id/BtGrades"
         app:layout_constraintTop_toBottomOf="@+id/BtGrades" />
 

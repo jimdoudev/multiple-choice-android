@@ -40,7 +40,8 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
             startActivity(intent);
         }
         if(v == BtGrades) {
-            //TODO intent grades
+            Intent intent = new Intent(getApplicationContext(), HighScores.class);
+            startActivity(intent);
         }
         if(v == BtReturn) {
             finish();

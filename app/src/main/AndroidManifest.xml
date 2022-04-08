@@ -11,8 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultipleChoiceProject">
         <activity
+            android:name=".HighScores"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".Evaluation"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".MultipleChoice"
             android:exported="false"

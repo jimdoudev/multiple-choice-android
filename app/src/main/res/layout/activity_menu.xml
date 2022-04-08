@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5696a9"
     tools:context=".Menu">
 
     <ImageView
@@ -27,7 +28,7 @@
         android:rotationY="6"
         android:text="Multiple Choice Test"
         android:textAlignment="center"
-        android:textColor="#4BA2E8"
+        android:textColor="#704e7d"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,7 +40,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="156dp"
-        android:backgroundTint="#47ACEF"
+        android:backgroundTint="#a96956"
         android:text="ΝΕΟ ΤΕΣΤ"
         app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +53,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#47ACEF"
+        android:backgroundTint="#a96956"
         android:text="HIGH SCORES"
         app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="@+id/BtNew"
@@ -63,7 +64,7 @@
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
-        android:backgroundTint="#47ACEF"
+        android:backgroundTint="#a96956"
         android:text="ΕΠΙΣΤΡΟΦΗ ΣΤΗΝ ΑΡΧΙΚΗ"
         app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="@+id/BtGrades"

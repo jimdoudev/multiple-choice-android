@@ -1,13 +1,3 @@
-/*
-TODO: Activities
-        1. Welcome Page
-        2. Personal Data Entry
-        3. Questionnaire
-        4. Results
- */
-
-//TODO: Create DB
-
 package com.example.multiplechoiceproject;
 
 import androidx.appcompat.app.AppCompatActivity;

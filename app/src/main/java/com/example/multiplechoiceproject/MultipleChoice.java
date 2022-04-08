@@ -144,7 +144,8 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
         for(i = 0; i < 4; i++) {
             TvAnswers[i].setBackground(Backdraw);
             if(i == SelectedAnswer)
-                TvAnswers[i].setBackgroundColor(Color.GREEN);
+                //Color color = new Color();
+                TvAnswers[i].setBackgroundColor(Color.parseColor("#6da956"));
         }
     }
 
@@ -215,6 +216,7 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
         stmt.bindString(2, AM);
         stmt.bindString(3, Score);
         stmt.bindString(4, DateSnap);
+        stmt.executeInsert();
     }
 
     @Override
@@ -239,7 +241,7 @@ public class MultipleChoice extends AppCompatActivity implements View.OnClickLis
 
     public void GetDate() {
         Date Date = Calendar.getInstance().getTime();
-        DateFormat DateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        DateFormat DateFormat = new SimpleDateFormat("dd-MM-yyyy");
         DateSnap = DateFormat.format(Date);
         System.out.println(DateSnap);
     }

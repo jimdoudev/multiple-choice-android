@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fadb44"
-    android:backgroundTint="@color/white"
+    android:background="#5696a9"
+    android:backgroundTint="#5696a9"
     tools:context=".WelcomePage">
 
     <ImageView
@@ -29,7 +29,7 @@
         android:rotationY="6"
         android:text="Multiple Choice Test"
         android:textAlignment="center"
-        android:textColor="#4BA2E8"
+        android:textColor="#704e7d"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,9 +54,8 @@
         android:layout_width="127dp"
         android:layout_height="50dp"
         android:layout_marginTop="56dp"
-        android:backgroundTint="#47ACEF"
+        android:backgroundTint="#a96956"
         android:text="ΕΝΑΡΞΗ"
-        android:textColor="#F1F1F1"
         app:cornerRadius="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

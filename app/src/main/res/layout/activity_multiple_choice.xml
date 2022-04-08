@@ -10,7 +10,8 @@
         android:id="@+id/TvTimer"
         android:layout_width="125dp"
         android:layout_height="37dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/play"
         android:text="03:00"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -23,7 +24,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="360dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:max="180"
         android:progress="180"
         android:progressTint="#2196F3"
@@ -31,4 +32,115 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TvTimer" />
+
+    <TextView
+        android:id="@+id/TvQuestNo"
+        android:layout_width="178dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/play"
+        android:text="Ερώτηση Χ"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PbProgress" />
+
+    <TextView
+        android:id="@+id/TvQuestion"
+        android:layout_width="380dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="20dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lectus nibh. Donec porttitor quam in nulla bibendum pulvinar."
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvQuestNo" />
+
+    <TextView
+        android:id="@+id/TvAnswer1"
+        android:layout_width="373dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lectus nibh. Donec porttitor quam in nulla bibendum pulvinar."
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvQuestion" />
+
+    <TextView
+        android:id="@+id/TvAnswer4"
+        android:layout_width="373dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lectus nibh. Donec porttitor quam in nulla bibendum pulvinar."
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvAnswer3" />
+
+    <TextView
+        android:id="@+id/TvAnswer3"
+        android:layout_width="373dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lectus nibh. Donec porttitor quam in nulla bibendum pulvinar."
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvAnswer2" />
+
+    <TextView
+        android:id="@+id/TvAnswer2"
+        android:layout_width="373dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut lectus nibh. Donec porttitor quam in nulla bibendum pulvinar."
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TvAnswer1" />
+
+    <Button
+        android:id="@+id/BtSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="ΚΑΤΑΧΩΡΗΣΗ"
+        app:layout_constraintEnd_toStartOf="@+id/BtNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BtPrev"
+        app:layout_constraintTop_toBottomOf="@+id/TvAnswer4" />
+
+    <ImageButton
+        android:id="@+id/BtPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/BtSubmit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BtSubmit"
+        app:srcCompat="@android:drawable/ic_media_previous" />
+
+    <ImageButton
+        android:id="@+id/BtNext"
+        android:layout_width="61dp"
+        android:layout_height="47dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/BtSubmit"
+        app:layout_constraintTop_toTopOf="@+id/BtSubmit"
+        app:srcCompat="@android:drawable/ic_media_next" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

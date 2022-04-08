@@ -38,6 +38,10 @@ public class Question {
         UserAnswer = userAnswer;
     }
 
+    public String getAnswer(int AnsNum) {
+        return Answers.get(AnsNum);
+    }
+
     public void AddAnswer(String Answer) {
         Answers.add(Answer);
     }
@@ -54,7 +58,7 @@ public class Question {
         return UserAnswer == CorrectAnswer;
     }
 
-    public int GetNoAnswers () {
+    public int getNoAnswers () {
         return Answers.size();
     }
 }

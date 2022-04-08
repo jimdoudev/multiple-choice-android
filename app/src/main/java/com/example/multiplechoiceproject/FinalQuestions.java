@@ -64,4 +64,53 @@ public class FinalQuestions {
 
 
     }
+
+    public int GetNoQuestions() {
+        return Questions.size();
+    }
+
+    public Question GetQuestion(int QNum) {
+        return Questions.get(QNum);
+    }
+
+    public Question GetQuestion() {
+        return Questions.get(CurrentQuestion);
+    }
+
+    public int GetNoUnansweredQuestions() {
+        int Counter = 0;
+        int i;
+        for (i = 0; i < GetNoQuestions(); i++) {
+            if(GetQuestion(i).getUserAnswer() == -1) {
+                Counter++;
+            }
+        }
+        return Counter;
+    }
+
+    public int GoNextUnAnswered() {
+        if(GetNoUnansweredQuestions() == 0) {
+            return -1;
+        }
+        do {
+            CurrentQuestion++;
+            if (CurrentQuestion == GetNoQuestions()) {
+                CurrentQuestion = 0;
+            }
+        } while (GetQuestion(CurrentQuestion).isAnswered());
+        return CurrentQuestion;
+    }
+
+    public int GoPreviousUnAnswered() {
+        if(GetNoUnansweredQuestions() == 0) {
+            return -1;
+        }
+        do {
+            CurrentQuestion--;
+            if (CurrentQuestion == -1) {
+                CurrentQuestion = GetNoQuestions() - 1;
+            }
+        } while (GetQuestion(CurrentQuestion).isAnswered());
+        return CurrentQuestion;
+    }
 }
